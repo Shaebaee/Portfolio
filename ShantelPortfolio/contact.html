@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Shantel Christie</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#050505;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+:root{
+    --rose:#c9897d;
+    --rose-light:#f4c6b9;
+    --rose-dark:#8f544d;
+}
+
+nav{
+    width:100%;
+    min-height:88px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 45px;
+    border-bottom:1px solid var(--rose);
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(0,0,0,0.88);
+    backdrop-filter:blur(10px);
+}
+
+.logo h2{
+    font-family:'Great Vibes',cursive;
+    color:var(--rose-light);
+    font-size:2.3rem;
+    font-weight:400;
+}
+
+.logo p{
+    letter-spacing:7px;
+    font-size:0.62rem;
+    margin-left:8px;
+    margin-top:5px;
+}
+
+.nav-links{
+    display:flex;
+    gap:14px;
+    list-style:none;
+    flex-wrap:wrap;
+}
+
+.nav-links a{
+    color:var(--rose-light);
+    text-decoration:none;
+    border:1px solid var(--rose-dark);
+    padding:13px 22px;
+    border-radius:7px;
+    font-size:0.78rem;
+    text-transform:uppercase;
+    transition:0.3s ease;
+    letter-spacing:0.7px;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color:#111;
+    background:linear-gradient(135deg,var(--rose-light),var(--rose-dark));
+    box-shadow:0 0 22px rgba(244,198,185,0.45);
+}
+
+.contact-hero{
+    min-height:100vh;
+    padding:150px 8% 90px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    background:
+    radial-gradient(circle at 15% 40%, rgba(201,137,125,0.16), transparent 25%),
+    linear-gradient(135deg,#030303,#090909,#000);
+}
+
+.contact-content .small-title{
+    color:#f4c6b9;
+    letter-spacing:7px;
+    text-transform:uppercase;
+    font-size:0.75rem;
+    margin-bottom:18px;
+}
+
+.contact-content h1{
+    font-size:5rem;
+    line-height:0.95;
+    font-family:'Playfair Display',serif;
+    background:linear-gradient(135deg,#fff1ea,#f4c6b9,#8f544d);
+    -webkit-background-clip:text;
+    color:transparent;
+    margin-bottom:25px;
+}
+
+.contact-content p{
+    color:#d7d0cc;
+    line-height:1.9;
+    margin-bottom:25px;
+    max-width:650px;
+}
+
+.contact-info{
+    margin-top:35px;
+}
+
+.contact-info div{
+    margin-bottom:20px;
+}
+
+.contact-info h3{
+    color:#f4c6b9;
+    margin-bottom:8px;
+    font-size:1rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.contact-info p,
+.contact-info a{
+    color:#fff;
+    text-decoration:none;
+    font-size:1rem;
+}
+
+.contact-image{
+    position:relative;
+}
+
+.contact-image img{
+    width:100%;
+    border-radius:22px;
+    border:1px solid rgba(201,137,125,0.35);
+    box-shadow:0 25px 60px rgba(0,0,0,0.55);
+    object-fit:cover;
+}
+
+.quote-section{
+    text-align:center;
+    padding:120px 8%;
+    background:
+    linear-gradient(rgba(0,0,0,0.88),rgba(0,0,0,0.95)),
+    radial-gradient(circle at center, rgba(201,137,125,0.2), transparent 45%);
+}
+
+.quote-section h2{
+    font-family:'Great Vibes',cursive;
+    font-size:4rem;
+    font-weight:400;
+    color:#fff;
+    margin-bottom:20px;
+}
+
+.quote-section p{
+    color:#f4c6b9;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:0.75rem;
+}
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    background:#000;
+    color:#f4c6b9;
+    border-top:1px solid #8f544d;
+}
+
+@media(max-width:1000px){
+
+.contact-hero{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.contact-content p{
+    margin:auto;
+}
+
+}
+
+@media(max-width:700px){
+
+nav{
+    flex-direction:column;
+    gap:18px;
+}
+
+.nav-links{
+    justify-content:center;
+}
+
+.nav-links a{
+    padding:10px 12px;
+    font-size:0.68rem;
+}
+
+.contact-content h1{
+    font-size:3.5rem;
+}
+
+.quote-section h2{
+    font-size:3rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+    <h2>Shantel Christie</h2>
+    <p>VISUAL STORYTELLER</p>
+</div>
+
+<ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="branding.html">Branding</a></li>
+    <li><a href="graphic-design.html">Graphic Design</a></li>
+    <li><a href="creative-direction.html">Creative Direction</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- CONTACT HERO -->
+
+<section class="contact-hero">
+
+<div class="contact-content">
+
+    <p class="small-title">
+        Let’s Create Something Meaningful
+    </p>
+
+    <h1>Contact</h1>
+
+    <p>
+        Thank you for exploring my portfolio. I’m passionate about
+        creative storytelling, branding, visual design, and production.
+        Whether it’s a collaboration, creative opportunity, freelance
+        project, or professional connection, I’d love to connect.
+    </p>
+
+    <div class="contact-info">
+
+        <div>
+            <h3>Email</h3>
+            <p>Shantel.c.sga@gmail.com</p>
+        </div>
+
+        <div>
+            <h3>Instagram</h3>
+            <a href="https://instagram.com/hotgyalbrand" target="_blank">
+                @just.shaebaee
+            </a>
+        </div>
+
+        <div>
+            <h3>Location</h3>
+            <p>Miami / Fort Lauderdale, Florida</p>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="contact-image">
+
+    <img src="pod.jpeg" alt="Shantel Christie">
+
+</div>
+
+</section>
+
+<!-- QUOTE -->
+
+<section class="quote-section">
+
+<h2>
+“Creativity leaves a lasting impression.”
+</h2>
+
+<p>
+Shantel Christie • Visual Storyteller
+</p>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Shantel Christie • Creative Director • Visual Storyteller
+</p>
+
+</footer>
+
+</body>
+</html>
