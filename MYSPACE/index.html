@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HOT GYAL BRAND</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&family=Permanent+Marker&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: #ff8bdc;
+      font-family: Verdana, sans-serif;
+      overflow-x: hidden;
+
+      background-image:
+        radial-gradient(circle at 20% 20%, #ff1493 0, transparent 2px),
+        radial-gradient(circle at 80% 40%, #ff1493 0, transparent 3px),
+        radial-gradient(circle at 50% 70%, #ff1493 0, transparent 2px);
+
+      background-size: 140px 140px;
+    }
+
+    /* FLOATING DECORATIONS */
+
+    .star,
+    .heart,
+    .lips {
+      position: fixed;
+      opacity: 0.9;
+      z-index: 0;
+      pointer-events: none;
+      filter: drop-shadow(0 0 10px #ff1493);
+    }
+
+    .star {
+      color: #ff4fc4;
+      font-size: 60px;
+    }
+
+    .heart {
+      color: #ff4fc4;
+      font-size: 55px;
+    }
+
+    .lips {
+      color: #ff4fc4;
+      font-size: 70px;
+    }
+
+    .s1 {
+      top: 80px;
+      left: 40px;
+    }
+
+    .s2 {
+      top: 500px;
+      right: 50px;
+    }
+
+    .s3 {
+      bottom: 100px;
+      left: 30px;
+    }
+
+    .h1 {
+      top: 250px;
+      right: 70px;
+    }
+
+    .h2 {
+      bottom: 40px;
+      left: 40px;
+    }
+
+    .l1 {
+      top: 420px;
+      left: 20px;
+    }
+
+    .l2 {
+      bottom: 80px;
+      right: 40px;
+    }
+
+    /* HEADER */
+
+    header {
+      background: linear-gradient(to bottom, #ff1493, #91004f);
+      padding: 15px 25px;
+      border-bottom: 2px solid #ff4fc4;
+      box-shadow: 0 0 20px #ff1493;
+      position: sticky;
+      top: 0;
+      z-index: 99;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 38px;
+      text-shadow: 0 0 15px white;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 18px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffc4ed;
+      text-shadow: 0 0 10px white;
+    }
+
+    /* MAIN LAYOUT */
+
+    .container {
+      width: 92%;
+      max-width: 1200px;
+      margin: 30px auto;
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 25px;
+      position: relative;
+      z-index: 2;
+      align-items: start;
+    }
+
+    /* ALL CONTENT BOXES */
+
+    .box {
+      width: 100%;
+      min-width: 0;
+      background: rgba(0, 0, 0, 0.92);
+      border: 2px solid #ff1493;
+      box-shadow: 0 0 20px #ff1493;
+      padding: 18px;
+      margin-bottom: 22px;
+      overflow: hidden;
+    }
+
+    h2 {
+      color: #ff4fc4;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ff1493;
+      padding-bottom: 10px;
+      text-shadow: 0 0 10px #ff1493;
+    }
+
+    .box p {
+      line-height: 1.7;
+    }
+
+    /* PROFILE PICTURE */
+
+    .profile-pic {
+      width: 100%;
+      height: 340px;
+      border: 2px solid #ff4fc4;
+      background-image: url("PROFILE.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 0 20px #ff1493;
+    }
+
+    .profile-info {
+      margin-top: 15px;
+    }
+
+    .profile-info p {
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .online {
+  color: #39ff14;
+  font-weight: bold;
+  display: inline-block;
+
+  text-shadow:
+    0 0 5px #39ff14,
+    0 0 10px #39ff14,
+    0 0 18px #39ff14;
+
+  animation:
+    onlineGlow 1.5s infinite alternate,
+    onlineTwinkle 2.4s infinite;
+}
+
+@keyframes onlineGlow {
+  from {
+    text-shadow:
+      0 0 4px #39ff14,
+      0 0 8px #39ff14;
+  }
+
+  to {
+    text-shadow:
+      0 0 8px #ffffff,
+      0 0 15px #39ff14,
+      0 0 25px #39ff14,
+      0 0 35px #39ff14;
+  }
+}
+
+@keyframes onlineTwinkle {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.55;
+    transform: scale(1.03);
+  }
+
+  55% {
+    opacity: 1;
+  }
+}
+
+    /* PROFILE BUTTONS */
+
+    .buttons button {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 12px;
+      background: #111;
+      color: #ff8bdc;
+      border: 1px solid #ff1493;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #ff1493;
+    }
+
+    .buttons button:last-child {
+      margin-bottom: 0;
+    }
+
+    .buttons button:hover {
+      background: #ff1493;
+      color: white;
+    }
+	  /* SPARKLE ANIMATION */
+
+.sparkle {
+  position: fixed;
+  color: #ffffff;
+  font-size: 28px;
+  z-index: 5;
+  pointer-events: none;
+  text-shadow:
+    0 0 5px white,
+    0 0 10px #ff4fc4,
+    0 0 20px #ff1493;
+  animation: sparkleGlow 1.8s infinite ease-in-out;
+}
+
+.sparkle-one {
+  top: 28%;
+  left: 8%;
+  animation-delay: 0s;
+}
+
+.sparkle-two {
+  top: 45%;
+  right: 7%;
+  animation-delay: 0.5s;
+}
+
+.sparkle-three {
+  bottom: 18%;
+  left: 12%;
+  animation-delay: 1s;
+}
+
+.sparkle-four {
+  top: 68%;
+  right: 12%;
+  animation-delay: 1.4s;
+}
+
+@keyframes sparkleGlow {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(0.6) rotate(0deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.4) rotate(180deg);
+  }
+}
+
+    /* HOT GYAL LOGO */
+
+    .logo {
+      text-align: center;
+      margin: 40px 0 35px;
+      position: relative;
+    }
+
+    .graffiti-logo {
+      position: relative;
+      display: inline-block;
+      font-family: "Rubik Spray Paint", "Permanent Marker", cursive;
+      font-size: 95px;
+      line-height: 0.85;
+      color: #ff4fc4;
+      letter-spacing: 4px;
+      -webkit-text-stroke: 2px #ffb6ec;
+
+      text-shadow:
+        0 0 5px #fff,
+        0 0 12px #ff1493,
+        0 0 25px #ff1493,
+        0 0 45px #ff1493,
+        5px 5px 0 #5a0034;
+    }
+
+    .graffiti-logo::before {
+      content: "HOT GYAL";
+      position: absolute;
+      left: 6px;
+      top: 6px;
+      color: transparent;
+      -webkit-text-stroke: 3px #ff1493;
+      z-index: -1;
+      filter: blur(2px);
+    }
+
+    .brand-small {
+      display: block;
+      font-family: Verdana, sans-serif;
+      font-size: 24px;
+      letter-spacing: 18px;
+      color: #ffc4ed;
+      margin-top: 12px;
+
+      text-shadow:
+        0 0 8px #ff1493,
+        0 0 20px #ff1493;
+    }
+
+    .drips {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      margin-top: -8px;
+    }
+
+    .drip {
+      width: 14px;
+      background: #ff1493;
+      border-radius: 0 0 20px 20px;
+
+      box-shadow:
+        0 0 8px #ff1493,
+        0 0 18px #ff1493,
+        0 0 30px #ff1493;
+    }
+
+    .drip.one {
+      height: 45px;
+    }
+
+    .drip.two {
+      height: 25px;
+    }
+
+    .drip.three {
+      height: 60px;
+    }
+
+    .drip.four {
+      height: 35px;
+    }
+
+    .crown {
+      position: absolute;
+      top: -45px;
+      left: 35%;
+      font-size: 35px;
+      color: #ffb6ec;
+      text-shadow: 0 0 15px #ff1493;
+    }
+
+    .logo-sparkle {
+      position: absolute;
+      color: #ffb6ec;
+      font-size: 35px;
+      text-shadow: 0 0 12px #ff1493;
+    }
+
+    .logo-sparkle.left {
+      left: 8%;
+      top: 20px;
+    }
+
+    .logo-sparkle.right {
+      right: 8%;
+      top: 35px;
+    }
+
+    /* BADDIE GALLERY */
+
+    .baddie-gallery {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .baddie-photo {
+      width: 100%;
+      min-width: 0;
+      height: 240px;
+      padding: 5px;
+      border: 2px solid #ff1493;
+      background: #111;
+      box-shadow: 0 0 10px #ff1493;
+      overflow: hidden;
+    }
+
+    .baddie-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* COMMENTS */
+
+    .comment {
+      margin-bottom: 18px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ff1493;
+    }
+
+    .comment:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .comment strong {
+      color: #ff4fc4;
+    }
+
+    /* FOOTER */
+
+    footer {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 40px 20px;
+      color: #ff8bdc;
+      text-shadow: 0 0 10px #ff1493;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 850px) {
+
+      header h1 {
+        font-size: 28px;
+      }
+
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .graffiti-logo {
+        font-size: 58px;
+      }
+
+      .brand-small {
+        font-size: 16px;
+        letter-spacing: 10px;
+      }
+
+      .baddie-gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .baddie-photo {
+        height: 210px;
+      }
+    }
+
+    /* PHONE */
+
+    @media (max-width: 600px) {
+
+      header {
+        padding: 15px;
+      }
+
+      header h1 {
+        font-size: 23px;
+      }
+
+      nav a {
+        display: inline-block;
+        font-size: 13px;
+        margin-right: 9px;
+        margin-bottom: 6px;
+      }
+
+      .container {
+        width: 94%;
+        margin-top: 20px;
+      }
+
+      .graffiti-logo {
+        font-size: 44px;
+        letter-spacing: 1px;
+      }
+
+      .brand-small {
+        font-size: 13px;
+        letter-spacing: 7px;
+      }
+
+      .baddie-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .baddie-photo {
+        height: 320px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- FLOATING DECORATIONS -->
+
+  <div class="star s1">✦</div>
+  <div class="star s2">✦</div>
+  <div class="star s3">✦</div>
+
+  <div class="heart h1">♡</div>
+  <div class="heart h2">♡</div>
+
+  <div class="lips l1">💋</div>
+  <div class="lips l2">💋</div>
+	
+	<div class="sparkle sparkle-one">✦</div>
+<div class="sparkle sparkle-two">✧</div>
+<div class="sparkle sparkle-three">✦</div>
+<div class="sparkle sparkle-four">✧</div>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <h1>Myspace | HOT GYAL BRAND</h1>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#photos">Photos</a>
+      <a href="#music">Music</a>
+      <a href="#about">About Me</a>
+      <a href="#comments">Comments</a>
+    </nav>
+
+  </header>
+
+  <!-- MAIN PAGE -->
+
+  <main class="container">
+
+    <!-- LEFT COLUMN -->
+
+    <section>
+
+      <div class="box">
+
+        <div class="profile-pic"></div>
+
+        <div class="profile-info">
+          <p class="online">💚 Online Now!</p>
+          <p><strong>Location:</strong> Miami, Florida</p>
+          <p><strong>Mood:</strong> Unbothered 💋</p>
+          <p><strong>Status:</strong> HOT GYAL ENERGY ONLY</p>
+        </div>
+
+      </div>
+
+      <div class="box buttons">
+
+        <button type="button">Send Message</button>
+        <button type="button">Add To Friends</button>
+        <button type="button">Instant Message</button>
+        <button type="button">Add To Favorites</button>
+        <button type="button">Rank User</button>
+
+      </div>
+
+      <div class="box" id="music">
+
+        <h2>Currently Listening To</h2>
+
+        <p>♪ City Girls — Act Up ♪</p>
+
+        <br>
+
+        <p>Volume: ███████░░</p>
+
+      </div>
+
+    </section>
+
+    <!-- RIGHT COLUMN -->
+
+    <section>
+
+      <div class="logo">
+
+        <span class="logo-sparkle left">✦</span>
+        <span class="crown">♕</span>
+
+        <div class="graffiti-logo">HOT GYAL</div>
+
+        <span class="logo-sparkle right">♡</span>
+
+        <div class="drips">
+          <span class="drip one"></span>
+          <span class="drip two"></span>
+          <span class="drip three"></span>
+          <span class="drip four"></span>
+        </div>
+
+        <span class="brand-small">BRAND</span>
+
+      </div>
+
+      <div class="box" id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+          Just a hot gyal building her brand, chasing dreams,
+          creating memories, and glowing louder every year.
+        </p>
+
+        <br>
+
+        <p>
+          Miami made me. Confidence keeps me.
+        </p>
+
+        <br>
+
+        <p>
+          Welcome to HOT GYAL BRAND ♡
+        </p>
+
+      </div>
+
+      <div class="box">
+
+        <h2>Favorite Quote</h2>
+
+        <p>
+          “A hot gyal never blends in.” 💋
+        </p>
+
+      </div>
+
+      <div class="box" id="photos">
+
+        <h2>Baddie Gallery</h2>
+
+        <div class="baddie-gallery">
+
+          <div class="baddie-photo">
+            <img src="baddie1.JPG" alt="Baddie photo 1">
+          </div>
+
+          <div class="baddie-photo">
+            <img src="baddie2.jpg" alt="Baddie photo 2">
+          </div>
+
+          <div class="baddie-photo">
+            <img src="baddie3.JPG" alt="Baddie photo 3">
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="box" id="comments">
+
+        <h2>Comments</h2>
+
+        <div class="comment">
+          <p>
+            <strong>Pretty Gyal:</strong>
+            You ate this whole look up! 💕
+          </p>
+        </div>
+
+        <div class="comment">
+          <p>
+            <strong>Miami Baddie:</strong>
+            Hot Gyal energy forever! 💋
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 HOT GYAL BRAND ♡
+  </footer>
+
+</body>
+</html>
