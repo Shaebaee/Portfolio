@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>STELLA Rent A Car</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#050505;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:15px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.75);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+
+  transition:transform 0.4s ease;
+}
+
+.logo{
+  width:170px;
+  height:auto;
+  overflow:hidden;
+}
+
+.logo img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:contain;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:30px;
+  font-size:14px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#00aaff;
+}
+
+/* HERO SECTION */
+
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  padding:0 8%;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.3)),
+    url("telsamiami.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.hero-content{
+  max-width:600px;
+}
+
+.hero h4{
+  color:#00aaff;
+  font-size:22px;
+  letter-spacing:2px;
+  margin-bottom:15px;
+}
+
+.hero h1{
+  font-size:80px;
+  line-height:0.95;
+  margin-bottom:25px;
+}
+
+.hero p{
+  font-size:20px;
+  line-height:1.7;
+  color:#ddd;
+  margin-bottom:35px;
+}
+
+.btn{
+  display:inline-block;
+  padding:15px 35px;
+  border-radius:6px;
+  text-decoration:none;
+  margin-right:15px;
+  transition:0.3s;
+  font-size:15px;
+}
+
+.btn-blue{
+  background:#008cff;
+  color:white;
+}
+
+.btn-outline{
+  border:1px solid white;
+  color:white;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+/* ABOUT */
+
+.about{
+  padding:100px 8%;
+  background:#0a0a0a;
+}
+
+.section-title{
+  color:#00aaff;
+  letter-spacing:2px;
+  font-size:14px;
+  margin-bottom:15px;
+}
+
+.about h2{
+  font-size:55px;
+  margin-bottom:25px;
+}
+
+.about p{
+  max-width:700px;
+  line-height:1.8;
+  color:#ccc;
+  font-size:18px;
+}
+
+/* FEATURE SECTION */
+
+.feature{
+  padding:100px 8%;
+  background:#050505;
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.feature-img img{
+  width:100%;
+  border-radius:12px;
+}
+
+.feature-content h2{
+  font-size:55px;
+  margin-bottom:20px;
+}
+
+.feature-content p{
+  color:#ccc;
+  line-height:1.8;
+  margin-bottom:25px;
+  font-size:17px;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  margin-bottom:35px;
+}
+
+.features div{
+  background:#111;
+  padding:15px;
+  border-radius:8px;
+}
+
+/* MIAMI VIBES */
+
+.miami{
+  padding:130px 8%;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.35)),
+    url("miami.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.miami h2{
+  font-size:70px;
+  margin-bottom:20px;
+}
+
+.miami span{
+  color:#00aaff;
+  font-style:italic;
+}
+
+.miami p{
+  max-width:700px;
+  line-height:1.8;
+  font-size:18px;
+  color:#ddd;
+}
+
+/* CONTACT */
+
+.contact{
+  padding:100px 8%;
+  text-align:center;
+  background:#080808;
+}
+
+.contact h2{
+  font-size:55px;
+  margin-bottom:20px;
+}
+
+.contact p{
+  margin-bottom:35px;
+  color:#ccc;
+}
+
+.contact input{
+  width:320px;
+  padding:16px;
+  background:#111;
+  border:none;
+  color:white;
+  border-radius:6px;
+  margin-right:10px;
+}
+
+/* FOOTER */
+
+footer{
+  padding:25px;
+  text-align:center;
+  background:black;
+  font-size:13px;
+  color:#888;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+  header{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  nav a{
+    margin:0 10px;
+  }
+
+  .logo{
+    width:150px;
+  }
+
+  .hero h1{
+    font-size:55px;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  .miami h2{
+    font-size:50px;
+  }
+
+  .contact input{
+    width:100%;
+    margin-bottom:15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="stellawht.png" alt="STELLA Rent A Car Logo">
+  </div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#vehicle">Our Car</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h4>STELLA CAR RENTAL AND TRANSPORTATION</h4>
+
+    <h1>
+      DRIVING<br>
+      EXPERIENCE
+    </h1>
+
+    <p>
+      Premium Tesla rentals and transportation
+      services in Miami, Florida.
+    </p>
+
+    <a href="#" class="btn btn-blue">Reserve On Turo</a>
+    <a href="#" class="btn btn-outline">Coming Soon</a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="section-title">ABOUT STELLA</div>
+
+  <h2>Luxury. Reliability. Experience.</h2>
+
+  <p>
+    STELLA Rent A Car & Transportation Service LLC delivers sleek,
+    modern, and reliable luxury transportation experiences in Miami.
+    Starting with our premium Tesla rental, we focus on style,
+    comfort, and convenience.
+  </p>
+</section>
+
+<section class="feature" id="vehicle">
+  <div class="feature-grid">
+    <div class="feature-img">
+      <img src="telsa.png" alt="Tesla rental vehicle">
+    </div>
+
+    <div class="feature-content">
+      <div class="section-title">FEATURED VEHICLE</div>
+
+      <h2>Tesla Model 3</h2>
+
+      <p>Electric. Luxury. Miami Ready.</p>
+
+      <div class="features">
+        <div>⚡ 100% Electric</div>
+        <div>🖥 Advanced Technology</div>
+        <div>🖤 Premium Interior</div>
+        <div>✈ Airport Pickup Available</div>
+        <div>📅 Daily Rentals</div>
+        <div>🌴 Smooth Miami Drive</div>
+      </div>
+
+      <a href="#" class="btn btn-blue">Coming Soon To Turo</a>
+    </div>
+  </div>
+</section>
+
+<section class="miami">
+  <div class="section-title">MIAMI VIBES</div>
+
+  <h2>Drive Miami <span>In Style.</span></h2>
+
+  <p>
+    From Ocean Drive to Brickell, experience Miami in a whole
+    new way. Luxury, comfort, and unforgettable memories
+    await behind the wheel.
+  </p>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-title">BE THE FIRST TO KNOW</div>
+
+  <h2>Be The First To Book.</h2>
+
+  <p>
+    Sign up for updates and be the first to know
+    when we launch on Turo.
+  </p>
+
+  <input type="email" placeholder="Enter your email">
+
+  <a href="#" class="btn btn-blue">Notify Me</a>
+</section>
+
+<footer>
+  © 2026 STELLA RENT A CAR & TRANSPORTATION SERVICE LLC MADE BY SHANTEL CHRISTIE
+</footer>
+	<script>
+
+let lastScrollTop = 0;
+const navbar = document.querySelector("header");
+
+window.addEventListener("scroll", function(){
+
+let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+if(scrollTop > lastScrollTop){
+  navbar.style.transform = "translateY(-100%)";
+}else{
+  navbar.style.transform = "translateY(0)";
+}
+
+lastScrollTop = scrollTop;
+
+});
+
+</script>
+</body>
+</html>
