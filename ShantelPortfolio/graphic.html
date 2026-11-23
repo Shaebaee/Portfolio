@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Graphic Design | Shantel Christie</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#050505;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+:root{
+    --rose:#c9897d;
+    --rose-light:#f4c6b9;
+    --rose-dark:#8f544d;
+}
+
+nav{
+    width:100%;
+    min-height:88px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 45px;
+    border-bottom:1px solid var(--rose);
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(0,0,0,0.88);
+    backdrop-filter:blur(10px);
+}
+	
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 160px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.logo h2{
+    font-family:'Great Vibes',cursive;
+    color:var(--rose-light);
+    font-size:2.3rem;
+    font-weight:400;
+}
+
+.logo p{
+    letter-spacing:7px;
+    font-size:0.62rem;
+    margin-left:8px;
+    margin-top:5px;
+}
+
+.nav-links{
+    display:flex;
+    gap:14px;
+    list-style:none;
+    flex-wrap:wrap;
+}
+
+.nav-links a{
+    color:var(--rose-light);
+    text-decoration:none;
+    border:1px solid var(--rose-dark);
+    padding:13px 22px;
+    border-radius:7px;
+    font-size:0.78rem;
+    text-transform:uppercase;
+    transition:0.3s ease;
+    letter-spacing:0.7px;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color:#111;
+    background:linear-gradient(135deg,var(--rose-light),var(--rose-dark));
+    box-shadow:0 0 22px rgba(244,198,185,0.45);
+}
+
+.page-header{
+    padding:150px 8% 70px;
+    text-align:center;
+    background:
+    radial-gradient(circle at 20% 40%, rgba(201,137,125,0.16), transparent 25%),
+    linear-gradient(135deg,#030303,#090909,#000);
+}
+
+.small-title{
+    color:#f4c6b9;
+    letter-spacing:7px;
+    text-transform:uppercase;
+    font-size:0.75rem;
+    margin-bottom:18px;
+}
+
+.page-header h1{
+    font-size:5rem;
+    font-family:'Playfair Display',serif;
+    background:linear-gradient(135deg,#fff1ea,#f4c6b9,#8f544d);
+    -webkit-background-clip:text;
+    color:transparent;
+    margin-bottom:20px;
+}
+
+.page-header p{
+    max-width:760px;
+    margin:auto;
+    color:#d7d0cc;
+    line-height:1.8;
+}
+
+.design-section{
+    padding:80px 8%;
+    border-top:1px solid rgba(201,137,125,0.18);
+}
+
+.section-title{
+    font-size:3rem;
+    font-family:'Playfair Display',serif;
+    color:#f4c6b9;
+    margin-bottom:15px;
+}
+
+.section-description{
+    max-width:780px;
+    color:#d7d0cc;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.design-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:28px;
+}
+
+.design-card{
+    background:#111;
+    border:1px solid rgba(201,137,125,0.25);
+    border-radius:18px;
+    overflow:hidden;
+    min-height:340px;
+    transition:0.4s ease;
+}
+
+.design-card:hover{
+    transform:translateY(-8px);
+    border-color:#f4c6b9;
+    box-shadow:0 20px 50px rgba(0,0,0,0.55);
+}
+
+.design-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:0.5s ease;
+}
+
+.design-card:hover img{
+    transform:scale(1.06);
+}
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    background:#000;
+    color:#f4c6b9;
+    border-top:1px solid #8f544d;
+}
+
+@media(max-width:700px){
+    nav{
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .nav-links{
+        justify-content:center;
+    }
+
+    .nav-links a{
+        padding:10px 12px;
+        font-size:0.68rem;
+    }
+
+    .page-header h1{
+        font-size:3.3rem;
+    }
+
+    .section-title{
+        font-size:2.4rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+ <div class="logo">
+  <a href="index.html">
+    <img src="shae-logo.png" alt="SHAE Logo">
+  </a>
+</div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="branding.html">Branding</a></li>
+        <li><a href="graphic.html">Graphic Design</a></li>
+        <li><a href="creative-direction.html">Creative Direction</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<header class="page-header">
+    <p class="small-title">Applied Design • Illustration • Visual Communication</p>
+
+    <h1>Graphic Design</h1>
+
+    <p>
+        A collection of design projects exploring flyers, illustration, typography,
+        web design, layout, and visual communication through creative concepts
+        and digital media.
+    </p>
+</header>
+
+<section class="design-section">
+    <h2 class="section-title">Flyers</h2>
+    <p class="section-description">
+        Promotional and event-inspired visuals focused on layout, audience engagement,
+        typography, and bold visual storytelling.
+    </p>
+
+    <div class="design-grid">
+        <div class="design-card">
+            <img src="ill2.jpeg" alt="Flyer Design 1">
+        </div>
+
+        <div class="design-card">
+            <img src="nickflyer1.jpg" alt="Flyer Design 2">
+        </div>
+
+        <div class="design-card">
+            <img src="flyer3.jpg" alt="Flyer Design 3">
+        </div>
+    </div>
+</section>
+
+<section class="design-section">
+    <h2 class="section-title">Illustration</h2>
+    <p class="section-description">
+        Illustration and applied design pieces showcasing creativity, composition,
+        digital art, and visual expression.
+    </p>
+
+    <div class="design-grid">
+        <div class="design-card">
+            <img src="ill1.jpg" alt="Illustration Design 1">
+        </div>
+
+        <div class="design-card">
+            <img src="ill3.jpg" alt="Illustration Design 2">
+        </div>
+
+        <div class="design-card">
+            <img src="ill4.jpg" alt="Illustration Design 3">
+        </div>
+    </div>
+</section>
+
+<section class="design-section">
+    <h2 class="section-title">Typography & Logos</h2>
+    <p class="section-description">
+        Lettermarks, logo concepts, typography studies, and identity-focused
+        design explorations.
+    </p>
+
+    <div class="design-grid">
+        <div class="design-card">
+            <img src="logo1.jpg" alt="Logo Design 1">
+        </div>
+
+        <div class="design-card">
+            <img src="logo2.jpg" alt="Logo Design 2">
+        </div>
+
+        <div class="design-card">
+            <img src="logo3.jpg" alt="Lettermark Design">
+        </div>
+    </div>
+</section>
+
+<section class="design-section">
+    <h2 class="section-title">Web Design</h2>
+    <p class="section-description">
+        Website visuals and layout concepts focused on digital branding,
+        user experience, and creative presentation.
+    </p>
+
+    <div class="design-grid">
+        <div class="design-card">
+            <img src="web1.png" alt="Website Design 1">
+        </div>
+
+        <div class="design-card">
+            <img src="web2.png" alt="Website Design 2">
+        </div>
+
+        <div class="design-card">
+            <img src="web3.png" alt="Website Design 3">
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Shantel Christie • Creative Director • Visual Storyteller</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shantel Christie Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #050505;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    :root {
+      --rose: #c9897d;
+      --rose-light: #f4c6b9;
+      --rose-dark: #8f544d;
+      --cream: #f7eee9;
+      --black: #050505;
+    }
+
+    header {
+      width: 100%;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(201,137,125,0.18), transparent 28%),
+        radial-gradient(circle at 80% 30%, rgba(201,137,125,0.12), transparent 20%),
+        linear-gradient(135deg, #030303 0%, #080808 50%, #000 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    nav {
+      width: 100%;
+      height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 45px;
+      border-bottom: 1px solid var(--rose);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,0.82);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 160px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+    .logo h2 {
+      font-family: 'Great Vibes', cursive;
+      color: var(--rose-light);
+      font-size: 2.3rem;
+      font-weight: 400;
+      text-shadow: 0 0 12px rgba(244,198,185,0.35);
+    }
+
+    .logo p {
+      letter-spacing: 7px;
+      font-size: 0.62rem;
+      margin-left: 8px;
+      margin-top: 5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--rose-light);
+      text-decoration: none;
+      border: 1px solid var(--rose-dark);
+      padding: 13px 22px;
+      border-radius: 7px;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      letter-spacing: 0.7px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #111;
+      background: linear-gradient(135deg, var(--rose-light), var(--rose-dark));
+      box-shadow: 0 0 22px rgba(244,198,185,0.45);
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding: 130px 6% 60px;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: center;
+      gap: 60px;
+      position: relative;
+    }
+
+    .photo-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .rope {
+      position: absolute;
+      top: -160px;
+      width: 16px;
+      height: 265px;
+      background: linear-gradient(90deg, #81614d, #d7b596, #5d4536);
+      border-radius: 20px;
+      z-index: 1;
+    }
+
+    .polaroid {
+      width: min(430px, 88vw);
+      background: #f5eee8;
+      padding: 18px 18px 75px;
+      transform: rotate(-8deg);
+      box-shadow: 0 28px 70px rgba(0,0,0,0.75);
+      position: relative;
+      z-index: 5;
+    }
+
+    .polaroid::before {
+      content: '';
+      position: absolute;
+      top: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 75px;
+      height: 32px;
+      border: 3px solid #151515;
+      border-radius: 5px;
+      background: #222;
+      box-shadow: inset 0 0 8px rgba(255,255,255,0.18);
+    }
+
+    .polaroid img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      display: block;
+      filter: contrast(1.05) brightness(0.95);
+    }
+
+    .caption {
+      color: #1c1c1c;
+      position: absolute;
+      bottom: 25px;
+      left: 34px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.85rem;
+    }
+
+    .paint-splash {
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, rgba(201,137,125,0.35), transparent 60%);
+      filter: blur(1px);
+      z-index: 0;
+    }
+
+    .hero-content {
+      text-align: center;
+      position: relative;
+      z-index: 4;
+    }
+
+    .small-title {
+      letter-spacing: 18px;
+      color: var(--cream);
+      font-size: 1rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(4rem, 8vw, 8rem);
+      line-height: 0.86;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #fff1ea, var(--rose-light), var(--rose-dark));
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 32px rgba(244,198,185,0.15);
+      margin-bottom: 5px;
+    }
+
+    .script {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(4rem, 7vw, 7rem);
+      color: #fff;
+      font-weight: 400;
+      margin-top: -5px;
+      text-shadow: 0 0 18px rgba(255,255,255,0.25);
+    }
+
+    .roles {
+      margin: 25px 0 20px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      color: var(--cream);
+    }
+
+    .hero-content p {
+      max-width: 620px;
+      margin: 0 auto;
+      line-height: 1.8;
+      color: #d8d0cc;
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 15px 40px;
+      background: linear-gradient(135deg, var(--rose-light), var(--rose-dark));
+      color: #111;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 3px;
+      border-radius: 2px;
+      box-shadow: 0 0 25px rgba(201,137,125,0.45);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 0 35px rgba(244,198,185,0.65);
+    }
+
+    .socials {
+      position: fixed;
+      left: 35px;
+      bottom: 70px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      z-index: 900;
+    }
+
+    .socials a {
+      color: var(--rose-light);
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .socials a:hover {
+      transform: translateX(6px);
+      color: #fff;
+    }
+
+    section {
+      padding: 95px 8%;
+      background: #080808;
+      border-top: 1px solid rgba(201,137,125,0.25);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: var(--rose-light);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .section-text {
+      max-width: 850px;
+      color: #d7d0cc;
+      line-height: 1.8;
+      margin-bottom: 35px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      min-height: 230px;
+      padding: 30px;
+      border: 1px solid rgba(201,137,125,0.35);
+      border-radius: 14px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.03), rgba(201,137,125,0.08));
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: var(--rose-light);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+    }
+
+    .card h3 {
+      color: var(--rose-light);
+      margin-bottom: 14px;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .card p {
+      color: #d0c7c3;
+      line-height: 1.7;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 45px 20px;
+      background: #000;
+      color: var(--rose-light);
+      border-top: 1px solid var(--rose-dark);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
+    }
+
+    @media (max-width: 1100px) {
+      nav {
+        height: auto;
+        padding: 22px;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 190px;
+        text-align: center;
+      }
+
+      .socials {
+        display: none;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .nav-links a {
+        padding: 10px 12px;
+        font-size: 0.68rem;
+      }
+
+      .polaroid img {
+        height: 350px;
+      }
+
+      .small-title {
+        letter-spacing: 9px;
+      }
+
+      section {
+        padding: 70px 6%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header id="home">
+    <nav>
+      <div class="logo">
+  <a href="index.html">
+    <img src="shae-logo.png" alt="SHAE Logo">
+  </a>
+</div>
+      
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="branding.html">Branding</a></li>
+        <li><a href="graphic.html">Graphic Design</a></li>
+        <li><a href="creative-direction.html">Creative Direction</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="socials">
+      <a href="#" aria-label="Instagram">◎</a>
+      <a href="#" aria-label="TikTok">♪</a>
+      <a href="mailto:shantel.c.sga@gmail.com" aria-label="Email">✉</a>
+    </div>
+
+    <div class="hero">
+      <div class="photo-wrap">
+        <div class="rope"></div>
+        <div class="paint-splash"></div>
+        <div class="polaroid">
+          <!-- Replace this with your own image path -->
+          <img src="shantelpod.jpeg" alt="Shantel Christie smiling in a podcast studio" />
+          <div class="caption">Creative. Intentional. Impactful. ♡</div>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <div class="small-title">Welcome To</div>
+        <h1>Shantel<br>Christie</h1>
+        <div class="script">Portfolio</div>
+        <div class="roles">Creative Director • Visual Storyteller • Content Creator</div>
+        <p>
+          I create culture-driven visuals through storytelling, branding, and creative direction.
+          Passionate about connecting fashion, music, and community through impactful design
+          and digital experiences.
+        </p>
+        <a href="#work" class="btn">Explore My Work</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="work">
+    <h2 class="section-title">Selected Work</h2>
+    <p class="section-text">
+      A starter portfolio featuring branding, graphic design, creative direction, and social media content creation.
+      Add your strongest projects here as your portfolio grows.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Branding</h3>
+        <p>Logo concepts, brand identity, Hot GYAL Brand visuals, and creative direction for lifestyle and fashion-based storytelling.</p>
+      </div>
+
+      <div class="card">
+        <h3>Graphic Design</h3>
+        <p>Publication design, campaign concepts, class projects, flyers, advertisements, and visual layouts.</p>
+      </div>
+
+      <div class="card">
+        <h3>Creative Direction</h3>
+        <p>Photoshoot concepts, behind-the-scenes production moments, set visuals, styling, and storytelling direction.</p>
+      </div>
+
+      <div class="card">
+        <h3>Content Creation</h3>
+        <p>Social media visuals, short-form content, video concepts, creative edits, and digital storytelling pieces.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Shantel Christie • Creative Director • Visual Storyteller • Content Creator</p>
+  </footer>
+</body>
+</html>
